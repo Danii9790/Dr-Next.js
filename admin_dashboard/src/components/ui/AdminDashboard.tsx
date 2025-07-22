@@ -22,7 +22,7 @@ import { auth } from "@/lib/firebase"; // correct path
 
 const SANITY_PROJECT_ID = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const SANITY_DATASET = process.env.NEXT_PUBLIC_SANITY_DATASET;
-const SANITY_TOKEN = process.env.NEXT_PUBLIC_SANITY_TOKEN;
+const SANITY_TOKEN = process.env.SANITY_TOKEN;
 const ADMIN_UID = process.env.NEXT_PUBLIC_ADMIN_UID;
 
 
