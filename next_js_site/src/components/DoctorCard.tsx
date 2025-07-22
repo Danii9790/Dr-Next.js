@@ -18,6 +18,8 @@ const DoctorCard = ({ name, specialty, image, description }: DoctorProps) => {
         <Image
           src={image}
           alt={name}
+          width={400}
+          height={250}
           className="w-full h-64 object-cover object-top rounded-xl"
         />
         <h3 className="text-xl font-semibold mt-4">{name}</h3>
