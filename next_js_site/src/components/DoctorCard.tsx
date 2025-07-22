@@ -1,7 +1,7 @@
 "use client";
 
 import { useSupportAgent } from "@/context/SupportAgentContext";
-
+import Image from "next/image";
 interface DoctorProps {
   name: string;
   specialty: string;
@@ -15,7 +15,7 @@ const DoctorCard = ({ name, specialty, image, description }: DoctorProps) => {
   return (
     <div className="bg-white shadow-md rounded-2xl p-4 w-full max-w-sm flex flex-col justify-between h-[550px]">
       <div>
-        <img
+        <Image
           src={image}
           alt={name}
           className="w-full h-64 object-cover object-top rounded-xl"
