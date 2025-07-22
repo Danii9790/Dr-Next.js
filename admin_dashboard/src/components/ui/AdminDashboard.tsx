@@ -27,17 +27,9 @@ const ADMIN_UID = process.env.NEXT_PUBLIC_ADMIN_UID;
 
 
 const fetchAppointments = async () => {
-  const query = `*[_type == "appointment"] | order(_createdAt desc)`;
-  const response = await fetch(
-    `https://${SANITY_PROJECT_ID}.api.sanity.io/v2023-07-19/data/query/${SANITY_DATASET}?query=${encodeURIComponent(query)}`,
-    {
-      headers: {
-        Authorization: `Bearer ${SANITY_TOKEN}`,
-      },
-    }
-  );
-  const data = await response.json();
-  return data.result || [];
+  const res = await fetch("/api/getappointments");
+  const data = await res.json();
+  return data || [];
 };
 
 export default function AdminDashboard() {
