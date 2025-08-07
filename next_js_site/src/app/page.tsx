@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import DoctorCard from "@/components/DoctorCard"
 import { getDoctors } from "../../lib/doctorList";
 
@@ -7,7 +6,6 @@ export default async function Home() {
 
   return (
     <div>
-      <Navbar />
       <section className="py-12 bg-gray-50 text-center">
         <h1 className="text-4xl font-bold text-blue-700 mb-4">Welcome to MediConnect</h1>
         <p className="text-gray-600 max-w-xl mx-auto">
@@ -29,10 +27,6 @@ export default async function Home() {
           ))}
         </div>
       </section>
-
-      <footer id="contact" className="bg-gray-100 py-6 text-center">
-        <p className="text-gray-600">© 2025 MediConnect. All rights reserved.</p>
-      </footer>
     </div>
   );
 }
